@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+P {
+    margin: 10px 120px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+a {
+    margin: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}
