@@ -2,11 +2,11 @@ import React, {FRAGMENT} from 'react'
 
 const Nav = () => {
 return  <>
-                <nav>
-                        <a href="#" target="_blank">Home</a>
-                        <a href="#" target="_blank">Nosotros</a>
-                        <a href="#" target="_blank">Contacto</a>
-                        <a href="#" target="_blank">Nosotros</a>
+                <nav className="navBar">
+                        <a href="#">Home</a>
+                        <a href="#">Nosotros</a>
+                        <a href="#">Contacto</a>
+                        <a href="#">Nosotros</a>
                 </nav>
         </>
         
