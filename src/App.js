@@ -10,11 +10,11 @@ const App = () => {
   return <>
           <Header/>
           <Nav/>
-          <itemListContainer/>
-          <Main participante={1,2,3}/>
+          <Main participante="Franco"/>
           <ItemCount/>
-          <Footer/>
           <ItemListContainer/>
+          <Footer/>
+          
         </>
 }
 

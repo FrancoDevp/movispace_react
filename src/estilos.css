@@ -9,7 +9,7 @@ html, body, #root {
 }
 
 body {
-    background-color: aquamarine;
+    background-color: #EEEEEE;
     text-align: center;
 }
 
@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content:space-between;
     padding: 10px;
-    background-color:rgb(47, 47, 187);
+    background-color:#FFC300;
     color: white;
 }
 
@@ -40,7 +40,7 @@ a {
 }
 
 a:hover {
-    color: cadetblue;
+    color: #FFF89A;
 }
 
 footer {
