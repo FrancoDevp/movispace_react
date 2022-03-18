@@ -5,6 +5,7 @@ import Main from './components/main.js'
 import ItemListContainer from './components/ItemListContainer.js'
 import Header from './components/header.js'
 import ItemCount from './components/ItemCount.js'
+import ItemDetailContainer from './components/ItemDetailContainer.js'
 
 const App = () => {
   return <>
@@ -13,8 +14,8 @@ const App = () => {
           <Main participante="Franco"/>
           <ItemCount/>
           <ItemListContainer/>
+          <ItemDetailContainer/>
           <Footer/>
-          
         </>
 }
 
