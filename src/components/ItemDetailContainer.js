@@ -7,42 +7,33 @@ const ItemDetailContainer = () => {
 
     const [clothes, setClothes] = useState([])
     const [cargar, setCargar] = useState(true)
-    // const {idClothes} = useParams()
-    // ${idClothes}
+
     useEffect(() => {
 
-        const solicitud = fetch(`https://fakestoreapi.com/products/`)
-        .then((resultado) => {
-            return resultado.json()
-        })
-        .then((respuesta) => {
-            setClothes(respuesta);
-            // console.table(respuesta);
-        })
-        .catch((error) => {
-            console.log("salio mal");
-        })
-        
-        const time = new Promise((resolve, reject) => {
+        const solicitud = fetch(`https://fakestoreapi.com/products?limit=4`)
+            .then((resultado) => {
+                return resultado.json()
+            })
+            .then((respuesta) => {
+                console.log("Esperando 2'");
+                setTimeout(() => {
+                    console.log("LISTO");
+                    setClothes(respuesta);
+                }, 2000)
+            })
+            .catch((error) => {
+                console.log("salio mal");
+            })
 
-        setTimeout(() => {
-            resolve(clothes)
-                }, 20000)
-            }) 
-            console.log(clothes);
-
-    },[])
+    }, [])
 
 
     return (
-            clothes.map(cloth => <ItemDetail cloth={cloth}/>)
+        <div className="d-flex justify-content-center m-5">
+            {clothes.map(cloth => <ItemDetail cloth={cloth} />)}
+        </div>
     )
 }
-
-
-
-
-
 
 
 export default ItemDetailContainer
