@@ -22,9 +22,9 @@ const ItemCount = () => {
     return (
         <div className='contador'>
             <p>Invitar amigos: {amigos}</p>
-            <button onClick={handleSumar}>Sumar invitacion</button>
-            <button onClick={handleReset}>RESET</button>
-            <button onClick={handleRestar}>Restar invitacion</button>
+            <button onClick={handleSumar} className='btn btn-success'>Sumar invitacion</button>
+            <button onClick={handleReset} className='btn btn-warning'>RESET</button>
+            <button onClick={handleRestar} className='btn btn-danger'>Restar invitacion</button>
         </div>
     )
 }

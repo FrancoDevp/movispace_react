@@ -1,19 +1,24 @@
 import React from 'react'
 import ItemList from './ItemList'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
+import { toast } from "react-toastify"
+
 
 let productosArray = [
-    {nombre: "zapatillas",
+  {
+    nombre: "zapatillas",
     precio: "$300",
     id: "1"
   },
 
-    {nombre: "buzo",
+  {
+    nombre: "buzo",
     precio: "$200",
     id: "2"
   },
 
-    {nombre: "gorra",
+  {
+    nombre: "gorra",
     precio: "$100",
     id: "3"
   }
@@ -23,35 +28,37 @@ let productosArray = [
 
 const ItemListContainer = () => {
 
-    const [cargar, setCargar] = useState(true)
-    const [productos, setProductos] = useState([])
+  const [cargar, setCargar] = useState(true)
+  const [productos, setProductos] = useState([])
 
-    useEffect(() => {
+  useEffect(() => {
+    toast.info()
+    const pedido = new Promise((resolve, error) => {
 
-      const pedido = new Promise((resolve,error) => {
+      setTimeout(() => {
+        resolve(productosArray)
+      }, 5000)
+    })
 
-        setTimeout(() =>{
-          resolve(productosArray)
-        }, 3000)
+    pedido
+      .then((resultado) => {
+        console.log("estuvo bien");
+        setProductos(resultado)
+        toast.dismiss()
+      })
+      .catch((error) => {
+        console.log("esta mal");
+        toast.error()
       })
 
-        pedido
-        .then((resultado) => {
-          console.log("estuvo bien");
-          setProductos(resultado)
-        })
-        .catch((error) => {
-          console.log("esta mal");
-        })
-      
-        
-    },[])
-    console.log(productosArray);
+
+  }, [])
+  console.log(productosArray);
 
   return (
     <div>
       <button className="btn-lg p-1 btn btn-dark" onClick={() => setCargar(!cargar)}>Listado de productos</button>
-      <ItemList productos={productos}/>
+      <ItemList productos={productos} />
     </div>
   )
 }
