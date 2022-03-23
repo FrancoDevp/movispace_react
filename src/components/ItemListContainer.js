@@ -2,7 +2,7 @@ import React from 'react'
 import ItemList from './ItemList'
 import { useState, useEffect } from 'react'
 import { toast } from "react-toastify"
-
+import { useParams } from "react-router-dom"
 
 let productosArray = [
   {
@@ -30,6 +30,8 @@ const ItemListContainer = () => {
 
   const [cargar, setCargar] = useState(true)
   const [productos, setProductos] = useState([])
+  const { idRopa } = useParams()
+
 
   useEffect(() => {
     toast.info()
@@ -42,8 +44,12 @@ const ItemListContainer = () => {
 
     pedido
       .then((resultado) => {
+        if(idRopa){
+         setProductos(resultado.filter(producto => producto.id === idRopa))
+        } else {
+          setProductos(resultado)
+        }
         console.log("estuvo bien");
-        setProductos(resultado)
         toast.dismiss()
       })
       .catch((error) => {
@@ -53,11 +59,16 @@ const ItemListContainer = () => {
 
 
   }, [])
+
+    useEffect(() => {
+    },[productos])
+
+
   console.log(productosArray);
 
   return (
     <div>
-      <button className="btn-lg p-1 btn btn-dark" onClick={() => setCargar(!cargar)}>Listado de productos</button>
+      <h1 className="" onClick={() => setCargar(!cargar)}>Listado de productos</h1>
       <ItemList productos={productos} />
     </div>
   )

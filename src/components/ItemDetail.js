@@ -1,5 +1,4 @@
 import React from 'react'
-import NIKE from '../assets/img/NIKE.jpg'
 import { Link } from "react-router-dom"
 
 

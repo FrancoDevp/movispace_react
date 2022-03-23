@@ -14,11 +14,11 @@ import { Route, Routes } from 'react-router-dom';
 const App = () => {
   return <BrowserRouter>
             <Header/>
-            <Main/>
             <Nav/>
+            <Main/>
             <ItemCount/>
-            <ItemListContainer/>
-            <ItemDetailContainer/>
+            {/* <ItemListContainer/> */}
+            {/* <ItemDetailContainer/> */}
             <ToastContainer/>
             <Footer/>
         </BrowserRouter>

@@ -1,6 +1,8 @@
 import React, {FRAGMENT} from 'react'
 import { Link } from "react-router-dom";
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Router } from 'react-router-dom';
+import ItemDetailContainer from './ItemDetailContainer';
+import ItemListContainer from './ItemListContainer';
 
 const Nav = () => {
 return  <>
@@ -8,8 +10,8 @@ return  <>
                 <Link to="Home">Home</Link>
                 <Link to="Productos">Productos</Link>
                 <Link to="Contacto">Contacto</Link>
-                <Link to="Invitaciones">Invitaciones</Link>
         </nav>
+        
         </>
         
 }

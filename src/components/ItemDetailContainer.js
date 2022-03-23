@@ -39,9 +39,6 @@ const ItemDetailContainer = () => {
     return (
         <div className="d-flex justify-content-center m-5">
             {clothes.map(cloth => <ItemDetail key={cloth.id} cloth={cloth} />)}
-            <Routes>
-                <Route path="/Carrito" element={<Carrito/>}/>
-            </Routes>
         </div>
     )
 }
