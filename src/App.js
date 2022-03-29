@@ -4,7 +4,6 @@ import Footer from './components/Footer.js'
 import Main from './components/main.js'
 import ItemListContainer from './components/ItemListContainer.js'
 import Header from './components/Header.js'
-import ItemCount from './components/ItemCount.js'
 import ItemDetailContainer from './components/ItemDetailContainer.js'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,7 +15,6 @@ const App = () => {
             <Header/>
             <Nav/>
             <Main/>
-            <ItemCount/>
             {/* <ItemListContainer/> */}
             {/* <ItemDetailContainer/> */}
             <ToastContainer/>

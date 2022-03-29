@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return <>
-        <div>Movispace todos los derechos reservados©</div>
+        <div className="Footer">Movispace todos los derechos reservados©</div>
     </>
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Bienvenido a Movispace</div>
+    <div className="h1 mb-5">Bienvenido a Movispace</div>
   )
 }
 

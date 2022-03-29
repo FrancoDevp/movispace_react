@@ -3,6 +3,7 @@ import ItemList from './ItemList'
 import { useState, useEffect } from 'react'
 import { toast } from "react-toastify"
 import { useParams } from "react-router-dom"
+import ItemCount from './ItemCount'
 
 let productosArray = [
   {
@@ -39,7 +40,7 @@ const ItemListContainer = () => {
 
       setTimeout(() => {
         resolve(productosArray)
-      }, 5000)
+      }, 1000)
     })
 
     pedido
