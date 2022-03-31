@@ -8,7 +8,7 @@ const Carrito = () => {
 
 
   return (
-    <div>Carrito</div>
+    <div></div>
   )
 }
 

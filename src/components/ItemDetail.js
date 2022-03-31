@@ -1,16 +1,22 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import ItemCount from './ItemCount'
-import { useState } from 'react'
-
+import { useState, useContext } from 'react'
+import context from './CartContext'
 
 
 const ItemDetail = ({cloth, showDetail}) => {
 
     const { agregado, setAgregado } = useState(false)
+    const { addCloth } = useContext(context)
+    
     const onAdd = (cantidadAgregada) => {
         console.log("Agregado", cantidadAgregada);
+        setAgregado(cantidadAgregada)
+        addCloth(cloth, cantidadAgregada)
     }
+
+
     return (<>
             <div className={`card mx-5 producto`}>
                 <div className="card-body">
