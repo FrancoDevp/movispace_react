@@ -9,12 +9,15 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from 'react-router-dom';
+import CartContext from './components/CartContext.js'
 
 const App = () => {
   return <BrowserRouter>
+          <CartContext>
             <Header/>
             <Nav/>
             <Main/>
+          </CartContext>
             {/* <ItemListContainer/> */}
             {/* <ItemDetailContainer/> */}
             <ToastContainer/>

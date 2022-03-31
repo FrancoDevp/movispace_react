@@ -40,7 +40,7 @@ a {
 }
 
 a:hover {
-    color: #FFF89A;
+    color: #c7bb0e;
 }
 
 .Footer {
@@ -83,4 +83,19 @@ img {
 .card:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px 8px white; 
+}
+
+.carrito {
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60%;
+    box-shadow: 0 0 8px grey;
+    border-radius:10px;
+}
+
+.carrito:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 8px white;
 }

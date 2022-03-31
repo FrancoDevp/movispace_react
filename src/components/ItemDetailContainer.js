@@ -24,6 +24,7 @@ const ItemDetailContainer = () => {
                 })
         } else {
             fetch(`https://fakestoreapi.com/products?limit=10`)
+                
                     
                 .then((resultado) => {
                     console.log(resultado);
