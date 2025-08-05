@@ -13,7 +13,12 @@ const ItemDetail = ({cloth, showDetail}) => {
         addCloth(cloth)
     }
 
- 
+// a state to save users
+
+
+    const [users, setUsers] = useState([])
+
+
 
 
     return (<>
@@ -23,7 +28,7 @@ const ItemDetail = ({cloth, showDetail}) => {
                     <p className="card-text">{cloth.title}</p>
                     <p className="card-text">{cloth.price}</p>
                     {showDetail && <p className="card-text">{cloth.description}</p>}
-                    {!showDetail && <Link to={`/Productos/${cloth.id}`}>Ver más</Link>}
+                    {!showDetail && <Link to={`/Productos/${cloth.id}`} className="detalle">Ver más</Link>}
                     {showDetail && <ItemCount stock={20} initial={0} onAdd={() => onAdd()}/>}
                 </div>
                     
